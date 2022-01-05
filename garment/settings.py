@@ -30,7 +30,7 @@ SECRET_KEY = config('SECRET_KEY')
 # .env
 DEBUG = config('DEBUG', default=True, cast=bool)  # True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['brnad-env.eba-rhcjrx2f.us-west-2.elasticbeanstalk.com']
 
 
 # Application definition
