@@ -1,0 +1,98 @@
+
+{% load static %}
+
+<style>
+	.footer-email {
+	 font-size: 20px;
+
+	}
+	.footer-by {
+		font-size: 16px;
+   
+	}
+	img {
+		display: inline;
+	}
+</style>
+<!-- ========================= FOOTER ========================= -->
+<footer class="section-footer border-top">
+	<div class="container">
+		<section class="footer-bottom border-top row">
+			<div class="col-md-2">
+				<p class="text-muted footer-by"> &copy 2022 Eazel Don-f1 </p>
+				<h6><a href="{% url 'home' %}">Back To Home</a></h6>
+			</div>
+			<div class="col-md-8 text-md-center footer-email">
+				<span  class="px-2 mr-3">garment@example.com</span>
+				<p><h6><a href="#">Contact</a></h6></p>
+				<!--<span  class="px-2">+879-332-9375</span>-->
+				<!--<span  class="px-2">Street name 123, Avanue abc</span>-->
+			</div>
+			<div class="col-md-2 text-md-right text-muted">
+				<img class="ml-2" src="{% static 'images/icon-media/instagram.png' %}" style="width:30px; height:30px;" alt="instagram">
+				<img class="ml-2" src="{% static 'images/icon-media/twitter.png' %}" style="width:30px; height:30px;" alt="twitter">
+				<img class="ml-" src="{% static 'images/icon-media/linkedin.png' %}" style="width:30px; height:30px;" alt="linkedin">
+				<p><h6><a class="mt-5" href="#">Customer Service</a></h6></p>
+			</div>
+			
+		</section>
+	</div><!-- //container -->
+</footer>
+<!--***** jquery PRODUCT GALLERY store-product_detail.html **************-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.thumb a').click(function(e){
+			e.preventDefault();
+			$('.mainImage img').attr('src', $(this).attr("href"));
+		})
+	})
+</script>
+
+<!-- ========================= FOOTER END // ========================= -->
+
+<!--***** jquery PRODUCT GALLERY store-product_detail.html **************-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$('.thumb a').click(function(e){
+			e.preventDefault();
+			$('.mainImage img').attr('src', $(this).attr("href"));
+		})
+	})
+</script>
+ 
+<!---Carosel-->
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,188 @@
+/* Hide Radio button */
+.rate > input{
+   display: none; /* hidden the dot select . . .*/
+ }
+ 
+ .rate{
+   display: inline-block;;
+   border: 0;
+ }
+
+ .rate > label{
+   float: right;
+ }
+ 
+ /* Showing the stars */
+ .rate > label:before{
+   display: inline-block;
+   font-size: 1.1rem;
+   font-family: FontAwesome;
+   content: "\f005";
+   margin:0;
+   padding:0.3rem .2rem;
+   cursor: pointer;
+ }
+
+ /* Half star */
+.rate .half:before{
+   content: "\f089";
+   position: absolute;
+   padding-right: 0;
+ }
+ 
+ /* Click and hover */
+input:checked ~ label, label:hover ~ label{
+   color: #ffb503;
+ }
+ 
+ /* hover hightlight */
+input:checked + label:hover, input:checked ~ label:hover,input:checked ~ label:hover ~ label,
+label:hover ~ input:checked ~ label{
+  color: #cc9000;
+}
+
+/* rating store/product_detail.html*/
+.rating-star {
+  color:#cc9000 !important;
+}
+
+/*store/product_detail.html-laoding more images*/
+ul.thumb{
+  margin:0 auto;
+  padding: 0;
+  float: left;
+}
+ul.thumb li{
+  list-style: none;
+  margin: 10px;
+}
+ul.thumb li img{
+  width: 80px;
+  height: 80px;
+  border: 1px solid grey;
+}
+
+/*''''''''''''''**************************'carosel*/
+
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  /*vertical-align: center;*/
+  display: inline;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.center {
+  /*vertical-align: center;*/
+  display:  block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.center-lower {
+     display:  block;
+  margin-left: auto;
+  margin-right: auto;
+    
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+background-color: rgb(0 0 0 / 17%);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 16px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #22222252;
+  /*padding: 2px 16px;*/
+  padding: 10px 19px;
+  font-size: 20px;
+  
+     
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+    .column {
+  /*float: left;*/
+  text-align: center;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+@media (max-width: 892px){
+	.table-shopping-cart .itemside .aside{
+		display: block !important;
+	}
+}

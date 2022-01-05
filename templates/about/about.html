@@ -1,0 +1,306 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<style>
+    .p-about {
+        font-size: 18px;
+    }
+
+
+</style>
+
+
+
+
+
+<!--<section class="section-intro padding-y-sm">
+   <div class="container">
+   
+   <div class="intro-banner-wrap">
+      <img src="{% static 'images/banners/1.jpg' %}" class="d-block w-100" alt="1">
+   </div>
+   
+   </div> --><!-- container //  -->
+  <!-- </section>-->
+
+<!--***************************-->
+<section class="section-intro padding-y-sm">
+    
+    <div class="container"> 
+  
+       <div class="row">
+         <div class="col-12">
+               <h2 Class="text-center">About the site</h2>
+               <a href="{% url 'home' %}" class="btn btn-sm btn-outline-info mb-3">back to home</a>
+               <br>
+               <h3>Demo</h3>
+             <div class="p-about">
+               <p>
+                The purpose of this site is to show some of my skills acquired during my studies at Code Institute and from additional online courses.
+                This is a Python and django e-commerce demo site only.
+
+
+               </p>
+             <br>
+             
+             <h3>Features</h3>
+               <p>
+               The site allows the site owner/administrator to display products, and product options, offered to visitors. 
+
+
+               </p>
+              <p>
+                 The site owner/administrator can show pictures of the products and provide some detailed information about the products. 
+                 The store owner can also display additional images in a carousel on the home page and create product categories.
+                 There is a gallery page showing multiple products, category pages and individual pages for each of the products.
+
+             
+             </p>
+             
+             <p> The visitor can read comments from other visitors and add the desired product to the cart after selecting the colour and size. There is also a search function available at the top of each page. The visitor can also register and create a profile, which will enable them to rate/review and comment on products as well as complete a purchase. 
+
+             </p>
+             
+             <p>
+             There are additional features accessible once a profile is created. For further details see the section “Logged in features” below. 
+
+             
+             </p>
+              <br>
+             
+                <h3>Logged In Features</h3>
+               
+             <p>
+                A special section requiring the user to log-in to gain access has been created.
+                 Certain features of the site are only available once the user has logged in.
+                  Examples of the features are displayed in the images below and include:
+                <p> checkout cart</p>
+                 <p>- a dashboard</p>
+                 
+                 <p>- section displaying your orders</p>
+                <p> - edit your personal details/profile</p>
+                 <p>- change your password. There is also a picture showing how the reset password e-mail looks once received in your inbox.</p>
+                 <p>- Once logged-in the user can also review/rate the products and leave comments.</p>
+                  
+               </div>
+           
+             <br>
+             <h3>Django Admin</h3>
+             <div  class="p-about">
+               <p>
+             There is also a picture below showing the django admin page that is available to the site administrator/owner.
+             All user accounts, product information and images are uploaded via the django administration.
+             </p>
+           </div>
+
+           
+        </div>
+        </div>    
+    </div>
+</section> 
+  
+
+
+ <!--********carousel grament ->static ****************-->
+
+<section class="section-intro padding-y-sm">
+    <div class="container"> 
+
+    
+  
+
+<h2 style="text-align:center">Logged In Features and Admin</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 12</div>
+    <img src="{% static 'images/about/Dashboard.png' %}" class="center" style="width:70%;height:50%;">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 12</div>
+    <img src="{% static 'images/about/Dasb16.png' %}" class="center" style="width:70%;height:50%;">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 12</div>
+    <img src="{% static 'images/about/Dashboard2.png' %}" class="center" style="width:70%;height:50%;">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 12</div>
+    <img src="{% static 'images/about/messages1.png' %}" class="center" style="width:70%;height:50%;">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 12</div>
+    <img src="{% static 'images/about/messages2.png' %}" class="center" style="width:70%;height:50%;">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 12</div>
+    <img src="{% static 'images/about/email-reset.png' %}" class="center" style="width:70%;height:50%;">
+  </div>
+    
+    <!--EXTRA-->
+      
+    
+     <div class="mySlides">
+    <div class="numbertext">7 / 12</div>
+    <img src="{% static 'images/about/Checkout.png' %}" class="center" style="width:70%;height:50%;">
+  </div>
+    
+    
+      <div class="mySlides">
+    <div class="numbertext">8 / 12</div>
+    <img src="{% static 'images/about/payment.png' %}" class="center" style="width:70%;height:50%;">
+  </div>
+    
+      <div class="mySlides">
+    <div class="numbertext">9 / 12</div>
+    <img src="{% static 'images/about/order-conpleted1.png' %}" class="center" style="width:70%;height:50%;">
+  </div>
+    
+     <div class="mySlides">
+    <div class="numbertext">10 / 12</div>
+    <img src="{% static 'images/about/registration-mess-1.png' %}" class="center" style="width:70%;height:50%;">
+  </div>
+    
+    
+     <div class="mySlides">
+    <div class="numbertext">11 / 12</div>
+    <img src="{% static 'images/about/admin.png' %}" class="center" style="width:70%;height:50%;">
+  </div>
+    
+    
+     <div class="mySlides">
+    <div class="numbertext">12 / 12</div>
+    <img src="{% static 'images/about/admin-products.png' %}" class="center" style="width:70%;height:50%;">
+  </div>
+    
+    
+    
+    
+    
+ 
+    <!--END EXTRA-->
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="{% static 'images/about/Dashboard.png' %}" class="center-lower" style="width:85%;height:50%;" onclick="currentSlide(1)" alt="Dashboard and Order id">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'images/about/Dasb16.png' %}" class="center-lower" style="width:85%; height:50%;" onclick="currentSlide(2)" alt="Order id Details">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'images/about/Dashboard2.png' %}" class="center-lower" style="width:85%;height:70%;" onclick="currentSlide(3)" alt="Edit Profile and Password">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'images/about/messages1.png' %}" class="center-lower" style="width:85%;height:50%;" onclick="currentSlide(4)" alt="Alert Messages">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="{% static 'images/about/messages2.png' %}" class="center-lower" style="width:85%;height:50%;" onclick="currentSlide(5)" alt="Reset and Forgot  Password">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="{% static 'images/about/email-reset.png' %}" class="center-lower" style="width:85%;height:50%;" onclick="currentSlide(6)" alt="Your Email Inbox"> 
+    </div>
+  
+    
+    
+    <!--EXTRA-->
+      
+    <div class="column">
+      <img class="demo cursor" src="{% static 'images/about/Checkout.png' %}" class="center-lower" style="width:85%;height:50%;" onclick="currentSlide(7)" alt="Checkout">
+    </div>
+      
+      
+  <div class="column">
+      <img class="demo cursor" src="{% static 'images/about/payment.png' %}" class="center-lower" style="width:85%;height:50%;" onclick="currentSlide(8)" alt="PayPal Payment">
+    </div>
+      
+      
+  <div class="column">
+      <img class="demo cursor" src="{% static 'images/about/order-conpleted1.png' %}" class="center-lower" style="width:85%;height:50%;" onclick="currentSlide(9)" alt="Order and Payment Success">
+    </div>
+      
+      
+   <div class="column">
+      <img class="demo cursor" src="{% static 'images/about/registration-mess-1.png' %}" class="center-lower" style="width:85%;height:50%;" onclick="currentSlide(10)" alt="Registration Success">
+    </div>
+      
+     <div class="column">
+      <img class="demo cursor" src="{% static 'images/about/admin.png' %}" class="center-lower" style="width:85%;height:50%;" onclick="currentSlide(11)" alt="Django Admin">
+    </div>
+      
+       <div class="column">
+      <img class="demo cursor" src="{% static 'images/about/admin-products.png' %}" class="center-lower" style="width:85%;height:50%;" onclick="currentSlide(12)" alt="Admin Products">
+    </div>
+      
+      
+    
+    
+   
+    <!--END EXTRA-->
+    
+    
+    
+    </div>
+</div>
+
+
+</div> 
+</section>
+<!--**********************end carosel-->
+
+<section class="section-intro padding-y-sm">
+    
+    <div class="container"> 
+  
+       <div class="row">
+         <div class="col-12">
+            <div  class="p-about">
+               <h3>Code Use</h3>
+               <p>
+                   HTML, CSS, SQL, JavaScript, Python and django was used to create this demo site.
+                    The site was deployed using AWS and GitHub.
+                    The PayPal developer service for students was used to create the payment functionality.
+                    W3schools and bootstrap was used for some parts of the site.
+
+
+
+               
+               </p>
+             <br>
+                <h3>Acknowledgement</h3>
+               <p>
+                   All pictures have been taken and edited by Eazel Don Frantzich.
+
+
+               </p>
+             
+               <br>
+                <h3 Class="text-center">Thank You</h3>
+               <p>
+                
+               </p>
+           
+             </div>
+
+           </div>
+        </div>    
+    </div>
+</section> 
+  
+
+  
+   <!-- sect5 lesson 23-->
+{% endblock %}

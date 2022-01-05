@@ -1,0 +1,148 @@
+{% load static %}
+
+
+<style>
+.notify {
+	background-color: #ff9800;
+
+}
+.logo-center {
+    margin-right: 7px;
+    max-height: 50px;
+    width: 100px;
+
+    display: inline-block;
+}
+    
+.col-6 .col-4{
+	
+    flex: 0 0 50%;
+    max-width: 50%;
+}    
+    .navbar {
+     font-size: 16px;
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+    
+    .bg-light {
+    /*background-color: #e4e4e4 !important;*/
+      background-color: #e4e4e43b !important;*/
+}
+    
+   
+</style>
+
+
+
+
+<section class="header-main border-bottom">
+	<div class="container">
+
+
+<!--****************************************-->
+        
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a  href="{% url 'home' %}"><img class="logo-center" src="{% static './images/brand-11.png' %}"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+      
+     </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+      <ul class="navbar-nav mr-auto">
+     
+        <!--***************************************-->
+     
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Gallery
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="{% url 'store' %}">All Products</a>
+           {% for category in links %}
+          <a class="dropdown-item" href="{{ category.get_url }}">{{ category.category_name }}</a>
+           {% endfor%}	
+        </div>
+      </li>
+      </ul>
+      
+   
+        <!--******************************************-->
+       <ul class="navbar-nav mr-auto"> 
+      
+        <li class="nav-item">
+            
+          
+            <form action="{% url 'search' %}" class="form-inline my-2 my-lg-0 search" method='GET'>
+      
+        <input type="text" class="form-control  mr-sm-2"  placeholder="Search" name="keyword" required>
+        
+        
+     
+        <button class="btn btn-outline-info my-2 my-sm-0" type="submit"><i class="fa fa-search"></i></button>
+    
+    </form>
+         
+        
+        
+        </li>
+           
+      </ul>
+           
+ <ul class="navbar-nav mr-auto"> 
+     <li  class="nav-item">
+   
+         
+         <!--**************************-->
+         
+     
+				<div class="d-flex justify-content-end mb-3 mb-lg-0">
+				{% if user.id is None %}
+					<div class="widget-header">
+						<small class="title text-muted"></small>
+						<div> 
+							<a href="{% url 'login' %}">Login</a> <span class="dark-transp"> | </span>
+							<a href="{% url 'register' %}"> Register</a>
+						</div>
+                  {% else %}
+						<div class="widget-header">
+						<small class="title text-muted">Welcome {{user.first_name}}</small>
+						<div> 
+							<a href="{% url 'dashboard' %}">Check Order</a> <span class="dark-transp"> | </span>
+							<a href="{% url 'logout' %}"> Logout</a>
+						</div>
+						{% endif %}
+
+
+					</div>
+					<a href="{% url 'cart' %}" class="widget-header pl-3 ml-3">
+					   <div class="icon icon-sm rounded-circle border"><i class="fa fa-shopping-basket"></i></div>
+						<span class="badge badge-info notify">{{cart_count}}</span>
+						<!--badge badge-pill badge-info notify-->
+					</a>
+				</div><!-- widgets-wrap.// -->
+			</div><!-- col.// -->
+      
+      </li> 
+         
+     
+    
+    </ul>
+      
+      
+     
+      
+  
+  </div>
+     
+     
+</nav>
+        
+
+ 
+    
+
+
+ 
