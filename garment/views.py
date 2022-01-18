@@ -12,7 +12,7 @@ def home(request):
     products = Product.objects.all().filter(is_available=True)
 
     # Get the reviews to home page
-    #reviews = None
+    reviews = None
     for product in products:
         reviews = ReviewRating.objects.filter(
             product_id=product.id, status=True)
