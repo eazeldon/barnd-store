@@ -2,7 +2,18 @@
 {% load static %}
 
 
+
 {% block content %}
+
+<style>
+	.gallery-wrp .img-big-wrp img{
+		height: 400px;
+		width: 347px;
+		display: inline-block;
+  }
+
+
+</style>
 <h2 class="text-center">Product Details</h2>
 
 <center><a href="{% url 'home' %}" class="btn btn-sm btn-outline-info mb-3">back to home</a></center>
@@ -13,10 +24,10 @@
 <div class="card">
 	<div class="row no-gutters">
 		<aside class="col-md-6">
-<article class="gallery-wrap"> 
+<article class="gallery-wrp"> 
 
 <!--<a href="{% url 'home' %}" class="btn btn-sm btn-outline-info mb-3">back to home</a>-->
-	<div class="img-big-wrap mainImage">
+	<div class="img-big-wrp mainImage">
 	   <center><img src="{{ single_product.images.url }}"></center>
 	</div> <!-- img-big-wrap.// -->
 	
