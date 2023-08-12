@@ -1,6 +1,9 @@
 ## Brandshop
 https://brandshop.se
 
+## Demo Video
+https://eazeldon.github.io/demo-video-brandstore/
+
 
 ### Concept
 The purpose of this site is to show some of my skills acquired during my studies at Code Institute and from additional online courses. This is a Python and django e-commerce demo site only.
